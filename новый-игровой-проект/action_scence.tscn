@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmq5of5mmhbgd"]
+
+[ext_resource type="Script" uid="uid://s3c3cw1cs5uu" path="res://action_scence.gd" id="1_1hm22"]
+
+[node name="ActionScence" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 651.0
+script = ExtResource("1_1hm22")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+
+[node name="TitleLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+
+[node name="TextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 649.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

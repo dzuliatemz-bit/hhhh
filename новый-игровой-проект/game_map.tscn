@@ -1,0 +1,74 @@
+[gd_scene load_steps=3 format=3 uid="uid://djqijjca1fwti"]
+
+[ext_resource type="Texture2D" uid="uid://bvsnk5ur46b2t" path="res://image.jpg" id="1_1va4l"]
+[ext_resource type="Script" uid="uid://b86t0e6en8h4k" path="res://history.gd" id="1_gcorv"]
+
+[node name="GameMap" type="Control" node_paths=PackedStringArray("stroika_button", "lab_button", "fire_button", "oil_button", "lives_label")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_right = 1152.0
+offset_bottom = 647.0
+script = ExtResource("1_gcorv")
+stroika_button = NodePath("history/StroikaButton")
+lab_button = NodePath("history/LabButton")
+fire_button = NodePath("history/FireButton")
+oil_button = NodePath("history/0ilButton")
+lives_label = NodePath("LivesLabel")
+
+[node name="LivesLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 652.0
+theme_override_font_sizes/font_size = 24
+text = "жизнь 3"
+
+[node name="MapBackground" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 2.0
+offset_right = 1146.0
+offset_bottom = 649.0
+texture = ExtResource("1_1va4l")
+expand_mode = 1
+
+[node name="history" type="ColorRect" parent="." node_paths=PackedStringArray("stroika_button", "lab_button", "fire_button", "oil_button")]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 644.0
+color = Color(0.42745098, 0.62352943, 0.5372549, 0)
+script = ExtResource("1_gcorv")
+stroika_button = NodePath("StroikaButton")
+lab_button = NodePath("LabButton")
+fire_button = NodePath("FireButton")
+oil_button = NodePath("0ilButton")
+
+[node name="StroikaButton" type="Button" parent="history"]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 499.0
+offset_right = 769.0
+offset_bottom = 530.0
+
+[node name="LabButton" type="Button" parent="history"]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 468.0
+offset_right = 993.0
+offset_bottom = 498.0
+
+[node name="FireButton" type="Button" parent="history"]
+layout_mode = 0
+offset_left = 835.0
+offset_top = 178.0
+offset_right = 996.0
+offset_bottom = 303.0
+
+[node name="0ilButton" type="Button" parent="history"]
+layout_mode = 0
+offset_left = 580.0
+offset_top = 51.0
+offset_right = 739.0
+offset_bottom = 184.0

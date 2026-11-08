@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://wa76v15eweyl"]
+
+[ext_resource type="Script" uid="uid://c22vc0ikt0cbb" path="res://game_manager.gd" id="1_70yv6"]
+[ext_resource type="Script" uid="uid://bn5o3s0m587dm" path="res://main_menu.gd" id="2_smx3j"]
+
+[node name="GameManager" type="Control" node_paths=PackedStringArray("play_button", "exit_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_70yv6")
+play_button = NodePath("MainMenu/PlayButton")
+exit_button = NodePath("MainMenu/ExitButton")
+
+[node name="MainMenu" type="Control" parent="."]
+anchors_preset = 0
+offset_top = -1.0
+offset_right = 1153.0
+offset_bottom = 648.0
+script = ExtResource("2_smx3j")
+
+[node name="PlayButton" type="Button" parent="MainMenu"]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 193.0
+offset_right = 861.0
+offset_bottom = 265.0
+text = "ОЙНАУ"
+
+[node name="ExitButton" type="Button" parent="MainMenu"]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 288.0
+offset_right = 863.0
+offset_bottom = 357.0
+text = "ШЫҒУ"

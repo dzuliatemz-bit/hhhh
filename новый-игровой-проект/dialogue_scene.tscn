@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6pet18y34dfm"]
+
+[ext_resource type="Script" uid="uid://dgwdsw3alelqk" path="res://dialogue_scene.gd" id="1_mngla"]
+[ext_resource type="Texture2D" uid="uid://1ocbu0vykuyc" path="res://Plaer_normal.png..png" id="2_s0okm"]
+
+[node name="DialogueScene" type="Control" node_paths=PackedStringArray("title_label", "text_label", "options_container", "character_sprite")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1155.0
+offset_bottom = 649.0
+script = ExtResource("1_mngla")
+title_label = NodePath("ColorRect/TitleLabel")
+text_label = NodePath("ColorRect/TextLabel")
+options_container = NodePath("VBoxContainer")
+character_sprite = NodePath("TextureRect")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 473.0
+offset_right = 1153.0
+offset_bottom = 641.0
+
+[node name="TitleLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 201.0
+offset_right = 241.0
+offset_bottom = 264.0
+
+[node name="TextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 368.0
+offset_right = 376.0
+offset_bottom = 420.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 638.0
+offset_top = 474.0
+offset_right = 1151.0
+offset_bottom = 639.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 826.0
+offset_top = 168.0
+offset_right = 1153.0
+offset_bottom = 480.0
+texture = ExtResource("2_s0okm")
+expand_mode = 1
